@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * main.h - header
- *
- *return 0 - sucessful
- */
+  * print_alphabet_x10 - loop 10 times
+  *
+  * Return: void
+  */
 void print_alphabet_x10(void)
 {
 	char c;
