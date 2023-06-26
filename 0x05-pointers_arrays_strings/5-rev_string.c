@@ -1,26 +1,32 @@
-#include "main.h"
-
-/*
- *   char *ptr = reverse(STR);
+#include "holberton.h"
+#include <stdio.h>
+/**
+ * rev_string - This fuction print a string reverser
  *
- * Reverse the characters of STR[] in place, and return STR.
+ *@s: this is the pointer that point to a string
  */
-char *reverse(char *s) {
-  char ch, *p, *q;
 
-  /* Point q at the last character in s[], or at &s[0] if s is empty. */
-  for (q = s; *q != '\0'; ++q)
-    ;
-  if (q > s)
-    --q;
-  
-  /* Simultaneously sweep p from front to back and q from back to front,
-   * swapping characters at p and q, until the pointers meet. */
-  for (p = s; p < q; ++p, --q) {
-    ch = *p;
-    *p = *q;
-    *q = ch;
-  }
+void rev_string(char *s)
+{
+	int a, len;
 
-  return s;
+	char *begin, *end = s;
+
+	for (a = 0; s[a] != '\0' && s[a + 1] != '\0'; a++)
+	{
+		end++;
+	}
+	len = a + 1;
+	begin = s;
+	for (a = 0; a < len / 2; a++)
+	{
+		char x;
+
+		x = *end;
+		*end = *begin;
+		*begin = x;
+		begin++;
+		end--;
+	}
+	end[len + 1] = '\0';
 }
