@@ -80,7 +80,6 @@ void *_calloc_buffer(long int num, long int size)
  *
  * Return: new position
  */
-
 char *trimzero(char *s)
 {
 	while (*s == '0')
@@ -99,7 +98,6 @@ char *trimzero(char *s)
  *
  * Return: 0 if successful, 98 if failure
  */
-
 int main(int ac, char **av)
 {
 	long int len1, len2, lenres, i, j;
