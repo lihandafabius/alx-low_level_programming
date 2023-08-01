@@ -5,6 +5,9 @@
   * reverse_listint - reverse function
   * @head: points to the first head
   * Return: return value
+  * Description: Limited to going through loop only once.
+  * Not allowed to use `malloc` or `free` or arrays
+  * Can only declare a max of 2 variables.
   */
 listint_t *reverse_listint(listint_t **head)
 {
