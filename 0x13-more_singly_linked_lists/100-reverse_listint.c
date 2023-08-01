@@ -10,7 +10,7 @@
 listint_t *reverse_recur(listint_t *first, listint_t *second)
 {
 	listint_t *ptr, *prev = NULL;
- 
+
 	ptr = first;
 	while (ptr->next != second)
 	{
