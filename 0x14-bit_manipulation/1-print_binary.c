@@ -1,27 +1,29 @@
-#include <unistd.h>
-#include <limits.h>
+#include "main.h"
+#include <stdio.h>
 
 /**
- * print_binary: function that prints unsigned long integer
- * @n:
- * Return: success
+ * print_binary -function that print binary representation of a number
+ * @n: The value  to print as binary
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int printbit = 1ul << 63;
-	char x = '0';
+	unsigned long int x;
+	int y;
 
-	while (!(printbit & n) && printbit != 0)
-		printbit = printbit >> 1;
-	if (printbit == 0)
-		write(1, &x, 1);
-	while (printbit)
+	if (n == 0)
 	{
-		if (printbit & n)
-			x = '1';
+		printf("0");
+		return;
+	}
+
+	for (x= n, y = 0; (x >>= 1) > 0; y++)
+		;
+
+	for (; y >= 0; y--)
+	{
+		if ((n >> y) & 1)
+			printf("1");
 		else
-			x = '0';
-		write(1, &x, 1);
-		printbit = printbit >> 1;
+			printf("0");
 	}
 }
