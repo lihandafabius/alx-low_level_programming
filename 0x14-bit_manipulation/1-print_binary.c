@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	for (x= n, y = 0; (x >>= 1) > 0; y++)
+	for (x = n, y = 0; (x >>= 1) > 0; y++)
 		;
 
 	for (; y >= 0; y--)
