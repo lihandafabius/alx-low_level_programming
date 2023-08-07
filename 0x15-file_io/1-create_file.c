@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * create_file - creates a file 
+  * create_file - creates a file
   * @filename: name of the file, if NULL, print errror
   * @text_content: contents of the file. If NULL, create an empty file
   * Return: 1 on success, -1 on failure
